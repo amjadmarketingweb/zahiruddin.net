@@ -2,6 +2,8 @@
 
 Repository: https://github.com/amjadmarketingweb/zahiruddin.net
 
+Custom domain `zahiruddin.net` was configured in GitHub Pages on **18 November 2026**. DNS and HTTPS verification are in progress. This rebuild uses the custom-domain root path reported by `actions/configure-pages`; saving the domain alone does not confirm DNS propagation or certificate readiness.
+
 The workflow in `.github/workflows/deploy-pages.yml` builds, verifies and deploys the Next.js static export on pushes to `main`. Select **GitHub Actions** in the repository's **Settings → Pages → Build and deployment → Source**.
 
 `GITHUB_PAGES=true` enables static export, trailing slashes and unoptimized Next images; the portrait is already compressed to WebP. The workflow obtains the actual URL prefix from `actions/configure-pages`, so the same source supports the initial GitHub project address and a later custom domain. Internal links, public image paths and the bundled font support that prefix.
@@ -16,9 +18,9 @@ To build an equivalent export locally (PowerShell):
 
 ```powershell
 $env:GITHUB_PAGES = 'true'
-$env:NEXT_PUBLIC_BASE_PATH = '/zahiruddin.net'
+$env:NEXT_PUBLIC_BASE_PATH = ''
 pnpm build
 pnpm verify
 ```
 
-Use an empty prefix for a custom-domain root. The default build without `GITHUB_PAGES=true` remains compatible with Vercel.
+The empty prefix above is for the configured custom-domain root. Use `/zahiruddin.net` only when building for the original GitHub project address. The default build without `GITHUB_PAGES=true` remains compatible with Vercel.
