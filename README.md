@@ -75,7 +75,7 @@ yayasan-amjad.png
 tae-aerospace.png
 ```
 
-All nine refined Drive assets were retrieved and compared with the original uploads. Because the refinements altered trademark details, the original artwork is used under the brief’s fidelity exception. Both sets are retained in `asset-reference/`, outside the public website; see [asset provenance](docs/ASSET-SOURCES.md). Preserve trademark wording, colours and proportions. Yayasan Amjad uses a dark container. The Martial Arts Brigade emblem retains its supplied “International” wording even though the career entry says “Global”. EMGS uses text unless an authentic logo is supplied. See [QA.md](QA.md) for final asset-import verification.
+All nine refined logo assets were compared with the original uploads. Because the refinements altered trademark details, the original artwork is used under the brief’s fidelity exception. Original/refined comparison material is retained separately for review and excluded from this public source repository. Preserve trademark wording, colours and proportions. Yayasan Amjad uses a dark container. The Martial Arts Brigade emblem retains its supplied “International” wording even though the career entry says “Global”. EMGS uses text unless an authentic logo is supplied. See [QA.md](QA.md) for final asset-import verification.
 
 The following resources remain intentionally unavailable until authentic material is supplied:
 
@@ -93,4 +93,8 @@ Navigation and interactive panels must remain keyboard operable; preserve semant
 
 ## Deployment
 
-This project is prepared for GitHub and Vercel. No repository, Vercel account deployment, domain ownership or DNS change is implied by the source files. Follow [DEPLOYMENT.md](DEPLOYMENT.md) to publish using an account and repository you control. The configuration sets the Next.js framework, `pnpm build` and a frozen-lockfile installation. No application secrets or backend services are required for the current portfolio.
+The public source is published in [amjadmarketingweb/zahiruddin.net](https://github.com/amjadmarketingweb/zahiruddin.net) and deployed through GitHub Pages. [Root-domain deployment run 44173645527](https://github.com/amjadmarketingweb/zahiruddin.net/actions/runs/44173645527) succeeded for commit `74e41773d9b6460ffebc1ee24d2635f3756d85f0` on 18 November 2026, using an empty URL prefix.
+
+The site is live at [https://zahiruddin.net/](https://zahiruddin.net/), with the candidature at [https://zahiruddin.net/4gmfunnelevocollege/](https://zahiruddin.net/4gmfunnelevocollege/). Both pages return 200 over HTTPS. DNS checks pass, the apex and `www` certificate validates, `www` redirects to the canonical apex, and GitHub Pages **Enforce HTTPS** is enabled. See [GITHUB-PAGES.md](GITHUB-PAGES.md) for the verified deployment and DNS snapshot.
+
+The default Next.js build and Vercel configuration remain available as an alternative; no Vercel deployment was performed. No application secrets or backend services are required.
